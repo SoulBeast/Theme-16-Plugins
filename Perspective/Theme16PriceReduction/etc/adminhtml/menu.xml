@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="Perspective_Theme16PriceReduction::theme16pricereduction" 
+            title="Theme 16 Price Reduction" 
+            module="Perspective_Theme16PriceReduction" 
+            sortOrder="51" 
+            resource="Perspective_Theme16PriceReduction::theme16pricereduction"/>
+        <add id="Perspective_Theme16PriceReduction::hello_configuration" 
+            title="Configuration" 
+            module="Perspective_Theme16PriceReduction" 
+            sortOrder="99" 
+            parent="Perspective_Theme16PriceReduction::theme16pricereduction" 
+            action="adminhtml/system_config/edit/section/pricereduction" 
+            resource="Perspective_Theme16PriceReduction::theme16pricereduction_configuration"/>
+    </menu>
+</config>

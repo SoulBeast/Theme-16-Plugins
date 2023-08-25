@@ -1,0 +1,17 @@
+<?php
+
+/** @var \Perspective\Theme15Ex2Social\Block\Template $block */
+
+
+$viewModel = $block->getViewModel();
+
+$currentProduct = $viewModel->getCurrentProduct();
+
+if ($viewModel->isEnabled() && $currentProduct->getData('social_attribute')) :
+    $discountTemp = $viewModel->getSocialDiscount() / 100;
+    $finalpriceTemp = $currentProduct->getFinalPrice() * $discountTemp;
+    $finalprice = $currentProduct->getFinalPrice() - $finalpriceTemp;
+    echo "<h3 style='color:black'>" . $currentProduct->getName() . ' - SOCIAL!!!' . "</h3>";
+    echo "<h3 style='color:black'>" . "Скидка на социальный продукт " . $viewModel->getSocialDiscount() . 
+    " %" . "</h3>" . "<h3 style='color:red'> Стоимость с учетом скидки: " . $finalprice . " $" . "</h3>";
+endif;

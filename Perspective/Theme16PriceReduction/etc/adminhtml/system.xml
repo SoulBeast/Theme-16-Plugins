@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+
+        <tab id="perspective" translate="label" sortOrder="10">
+            <label>Perspective</label>
+        </tab>
+
+        <section id="pricereduction" translate="label" sortOrder="130" showInDefault="1" showInWebsite="1" showInStore="1">
+            <class>separator-top</class>
+            <label>Theme 16 Price Reduction</label>
+            <tab>perspective</tab>
+            <resource>Perspective_Theme16PriceReduction::theme16pricereduction_configuration</resource>
+
+            <group id="general" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="0" showInStore="0">
+                <label>General Configuration</label>
+                
+                <field id="enable" translate="label" type="select" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Module Enable</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <config_path>perspective/general/enable</config_path>
+                </field>
+
+                <field id="product_categories" translate="label" type="multiselect" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Product categories</label>        
+                    <source_model>Perspective\Theme16PriceReduction\Model\Config\Source\ListMode</source_model>
+                    <config_path>perspective/general/product_categories</config_path>
+                    <depends>
+                        <field id="enable">1</field>
+                    </depends>
+                </field>
+
+                <field id="price_reduction_percentage" type="text" translate="label" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Price reduction %</label>
+                    <validate>required-entry</validate>
+                    <config_path>perspective/general/price_reduction_percentage</config_path>
+                    <depends>
+                        <field id="enable">1</field>
+                    </depends>
+                </field>
+
+            </group>
+        </section>
+    </system>
+</config>

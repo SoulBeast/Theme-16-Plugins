@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+    <default>
+        <perspective>
+            <theme15ex2social>
+                <title>Theme15Ex2Social</title>
+            </theme15ex2social>
+        </perspective>
+    </default>
+</config>

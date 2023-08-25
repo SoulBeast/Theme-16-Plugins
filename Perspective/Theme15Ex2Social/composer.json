@@ -1,0 +1,17 @@
+{
+    "name": "perspective/theme15ex2social",
+    "description": "",
+    "type": "magento2-module",
+    "version": "1.0.0",
+    "license": [
+      "MIT"
+    ],
+    "autoload": {
+      "psr-4": {
+        "Perspective\\Theme15Ex2Social\\": ""
+      },
+      "files": [
+        "registration.php"
+      ]
+    }
+  }

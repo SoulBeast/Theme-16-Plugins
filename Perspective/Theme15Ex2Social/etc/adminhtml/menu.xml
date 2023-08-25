@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="Perspective_Theme15Ex2Social::theme15ex2social" title="Theme 15 Social" module="Perspective_Theme15Ex2Social" sortOrder="51" resource="Perspective_Theme15Ex2Social::theme15ex2social"/>
+        <add id="Perspective_Theme15Ex2Social::hello_configuration" title="Configuration" module="Perspective_Theme15Ex2Social" sortOrder="99" parent="Perspective_Theme15Ex2Social::theme15ex2social" action="adminhtml/system_config/edit/section/social" resource="Perspective_Theme15Ex2Social::theme15ex2social_configuration"/>
+    </menu>
+</config>
